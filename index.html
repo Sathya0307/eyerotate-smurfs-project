@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMURFS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body bgcolor="pink">
+    <center>
+        <h1>Smurfs Princess</h1>
+        <img src="./Assert/smurfs.webp" >
+        <div class="container">
+            <div class="eye1">
+                <div class="ball1">
+                    <div class="lense1"></div>
+                </div>
+            </div>
+            <div class="eye2">
+                <div class="ball1">
+                    <div class="lense1"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var ball = document.getElementsByClassName("ball1");
+            document.onmousemove = function(){
+                var x = event.clientX * 100 / window.innerWidth + "%";
+                var y = event.clientY * 70 / window.innerHeight + "%";
+                for (var i = 0 ; i < 2; i++)
+                {
+                    ball[i].style.left = x/2;
+                    ball[i].style.top = y/2;
+                    ball[i].style.transform = "translate("+x+","+y+")";
+                }
+            }
+        </script>
+    </center>
+    
+</body>
+</html>
